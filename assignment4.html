@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStore - Mini Amazon Clone</title>
+  <style>
+    body {margin:0;font-family:Arial;background:#f5f5f5;}
+    /* Sale Banner */
+    .sale-banner {
+      background:#ff4d4d;color:#fff;text-align:center;
+      padding:10px;font-weight:bold;font-size:18px;
+    }
+    /* Header */
+    header {
+      position:sticky;top:0;z-index:1000;
+      background:#232f3e;color:#fff;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 20px;box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {margin:0;font-size:22px;}
+    nav a {color:#fff;margin:0 10px;text-decoration:none;font-size:15px;}
+    nav a:hover{text-decoration:underline;}
+    .search {flex:1;margin:0 20px;}
+    .search input {width:100%;padding:8px 10px;border:none;border-radius:4px;}
+    /* Main */
+    .main {max-width:1200px;margin:20px auto;padding:0 15px;}
+    h2 {margin-bottom:20px;text-align:center;}
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+    .card {
+      background:#fff;border-radius:12px;padding:15px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.15);
+      transition:transform 0.2s, box-shadow 0.2s;text-align:center;
+    }
+    .card:hover {transform:translateY(-5px);box-shadow:0 6px 15px rgba(0,0,0,0.25);}
+    .card img{
+      width:100%;height:200px;object-fit:contain;
+      border-radius:8px;background:#fff;
+    }
+    .card h3{margin:12px 0 5px;font-size:18px;}
+    .card p{color:#b12704;font-weight:bold;margin:8px 0;}
+    button{
+      background:#f0c14b;border:1px solid #a88734;padding:8px 14px;
+      border-radius:5px;cursor:pointer;font-size:15px;
+    }
+    button:hover{background:#ddb347;}
+    /* Floating Cart */
+    .cart-btn {
+      position:fixed;bottom:20px;right:20px;z-index:2000;
+      background:#f0c14b;color:#000;padding:14px 22px;
+      border-radius:50px;box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      border:none;font-weight:bold;cursor:pointer;font-size:16px;
+    }
+    .cart-btn:hover {background:#ddb347;}
+    /* More Options */
+    .more-options {
+      background:#fff;padding:25px;text-align:center;margin-top:40px;
+      box-shadow:0 -2px 6px rgba(0,0,0,0.1);
+    }
+    .more-options a {
+      margin:0 15px;color:#232f3e;text-decoration:none;font-size:14px;
+    }
+    .more-options a:hover {text-decoration:underline;}
+    /* Footer */
+    footer {
+      margin-top:0;padding:20px;text-align:center;
+      background:linear-gradient(to right,#232f3e,#131921);
+      color:#fff;font-size:14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sale Banner -->
+  <div class="sale-banner">🔥 Sale is Live! Grab Your Deals Now 🔥</div>
+
+  <!-- Header -->
+  <header>
+    <h1>MyStore</h1>
+    <div class="search"><input type="text" placeholder="Search products..."></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <div class="main">
+    <h2>Featured Products</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71TPda7cwUL._AC_UL480_.jpg" alt="Laptop">
+        <h3>Laptop</h3><p>$799.99</p><button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UL480_.jpg" alt="Headphones">
+        <h3>Headphones</h3><p>$59.99</p><button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71hIfcIPyxS._AC_UL480_.jpg" alt="Smartphone">
+        <h3>Smartphone</h3><p>$699.99</p><button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71BVQHZ+idL._UF1000,1000_QL80_.jpg" alt="Tablet">
+        <h3>Tablet</h3><p>$399.99</p><button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/originals/7d/39/39/7d3939a449d49568723455058462e0c3.jpg?nii=t" alt="Keyboard">
+        <h3>Keyboard</h3><p>$39.99</p><button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/41D6K+q8LUL._UF1000,1000_QL80_.jpg" alt="Smart Watch">
+        <h3>Smart Watch</h3><p>$129.99</p><button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- More Options -->
+  <div class="more-options">
+    <a href="#">About Us</a>
+    <a href="#">Help</a>
+    <a href="#">Returns</a>
+    <a href="#">Careers</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MyStore | Contact: abc@gmail.com</p>
+  </footer>
+
+  <!-- Floating Cart -->
+  <button class="cart-btn">🛒 Cart</button>
+
+</body>
+</html>
