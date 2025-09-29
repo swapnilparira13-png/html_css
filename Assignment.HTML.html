@@ -1,0 +1,141 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>My First Webpage</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffecd2, #fcb69f); /* nice gradient background */
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: darkred;
+        }
+        h2 {
+            color: darkblue;
+        }
+        h3 {
+            color: green;
+        }
+        p {
+            font-size: 18px;
+            color: #333333;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        th {
+            background-color: lightgreen;
+        }
+        img:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+            border: 3px solid red;
+        }
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading and text -->
+    <h1>🌸 Welcome to My Webpage 🌸</h1>
+    <h3>This is a <span style="color:blue;">sub-heading</span></h3>
+    <p style="color:darkorange;">This is a simple paragraph. I am learning <b style="color:red;">HTML</b> and making my first webpage.</p>
+
+    <!-- Links -->
+    <h2>Useful Links</h2>
+    <p>📘 Learn HTML here: <a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML</a></p>
+    <p>🎨 Free Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+
+    <!-- Lists -->
+    <h2>My Hobbies</h2>
+    <ul>
+        <li style="color:blue;">Reading</li>
+        <li style="color:green;">Drawing</li>
+        <li style="color:purple;">Playing Games</li>
+    </ul>
+
+    <h2>Steps to Start HTML</h2>
+    <ol>
+        <li style="color:red;">Open Notepad</li>
+        <li style="color:blue;">Write HTML code</li>
+        <li style="color:darkgreen;">Save with .html extension</li>
+        <li style="color:brown;">Open in browser</li>
+    </ol>
+
+    <!-- Image -->
+    <h2>Sample Image</h2>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" width="300" alt="Nature Image">
+
+    <!-- Video -->
+    <h2>Sample Video</h2>
+    <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <!-- Audio -->
+    <h2>Sample Audio</h2>
+    <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <!-- Table -->
+    <h2>Student Table</h2>
+    <table>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td style="color:blue;">Amit</td>
+            <td style="color:green;">85</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td style="color:purple;">Sneha</td>
+            <td style="color:red;">90</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td style="color:orange;">Ravi</td>
+            <td style="color:brown;">78</td>
+        </tr>
+    </table>
+
+    <!-- Simple Form -->
+    <h2>Contact Form</h2>
+    <form>
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        Message:<br>
+        <textarea rows="4" cols="30"></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+
+    <!-- Simple Login -->
+    <h2>Login</h2>
+    <form>
+        Username: <input type="text" name="user"><br><br>
+        Password: <input type="password" name="pw"><br><br>
+        <input type="submit" value="Login">
+    </form>
+
+</body>
+</html>
